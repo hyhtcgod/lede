@@ -53,6 +53,7 @@ jobs:
           # git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
           git clone https://github.com/messense/aliyundrive-webdav.git
           git clone  https://github.com/gdy666/luci-app-lucky.git
+          git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush.git
 
       - name: Update feeds
         run: |
@@ -97,6 +98,8 @@ jobs:
           CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-argon-config=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
+          CONFIG_PACKAGE_luci-app-serverchan=y
+          CONFIG_PACKAGE_luci-app-wechatpush=y
           CONFIG_PACKAGE_luci-i18n-aliyundrive-webdav-zh-cn=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
           # CONFIG_PACKAGE_luci-app-openvpn=y
