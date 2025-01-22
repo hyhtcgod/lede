@@ -58,4 +58,9 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
+uci set network.lan.ipaddr='192.168.3.1'   # 默认 IP 地址
+uci set network.lan.ifname='eth0 eth1 eth2 eth3 eth4'   # 网络端口：默认 eth0，第一个接口
+uci set network.wan.ifname='eth5'   # 网络端口：默认 eth0，第一个接口
+uci commit network
+
 exit 0
